@@ -207,6 +207,28 @@ HSA_XNACK=0 ./vector_add_usm
 map clauseがあってもなくてもOpenMPランタイムが適切にdata copyを
 処理することを確認しました。
 
+## HIP-Python
+HIPの主要なライブラリをPythonから呼び出すことが可能です。対応しているAPIについては
+[HIP Python](https://rocm.docs.amd.com/projects/hip-python/en/latest/)を
+参照してください。
+インストールが必要です。venvなどのPythonの仮想環境を用いることを推奨します。
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+python3 -m pip install -i https://test.pypi.org/simple hip-python~=7.1.1
+pip install numpy
+```
+
+rocBLASを用いた例です。C/C++ベースのHIPと同様に、`HSA_XNACK=1`を用いた
+APU Programmingにより、GPUデバイス用のメモリ確保、データコピーを記述する
+必要がないことをソースコードを比較して確認してください。
+
+```bash
+cd third_party/HPCTrainingExamples/Python/hip-python
+python hipblas_numpy_example.py
+HSA_XNACK=1 python hipblas_numpy_USM_example.py
+```
 
 ## References
 - [AMD ROCm documentation](https://rocm.docs.amd.com/en/latest/)
