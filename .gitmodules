@@ -1,0 +1,3 @@
+[submodule "third_party/HPCTrainingExamples"]
+	path = third_party/HPCTrainingExamples
+	url = https://github.com/amd/HPCTrainingExamples.git
