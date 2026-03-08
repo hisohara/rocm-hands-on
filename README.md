@@ -205,7 +205,7 @@ HSA_XNACK=0 ./vector_add_usm
 ```
 
 map clauseがあってもなくてもOpenMPランタイムが適切にdata copyを
-処理することを見ました。
+処理することを確認しました。
 
 
 ## References
