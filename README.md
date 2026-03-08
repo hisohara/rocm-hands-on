@@ -60,8 +60,23 @@ HSA_XNACK=1 ./gpu_code
 HSA_XNACK=0 ./gpu_code
 ```
 
+### OpenMP Code
+OpenMPはCPUコードをGPU向けコードに移行するにあたって非常に有用なツールです。
+まず、OpenMP化されたコードをCPU上で動作させてみましょう。
+OpenMP向けのコンパイラオプションを付けなければCPU向けのコードを生成します。
 
+```bash
+cd OpenMP_Code
+amdclang -O3 -fstrict-aliasing -fno-lto -lm -o openmp_code-cpu openmp_code.c
+./openmp_code-cpu
+```
 
+次にOpenMPのコンパイラオプションを付けてGPU上で実行させましょう。
+
+```bash
+amdclang -O3 -fstrict-aliasing -fopenmp --offload-arch=gfx942 -fno-lto -lm -o openmp_code-gpu openmp_code.c
+HSA_XNACK=1 ./openmp_code-gpu
+```
 
 
 ## References
