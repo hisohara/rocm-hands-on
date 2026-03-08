@@ -2,6 +2,16 @@
 [「計算物理春の学校2026」](https://compphysschool.github.io/2026/) 個別講義Cの
 ROCm向けハンズオンの資料です。
 
+## Table of Contents
+- [How to deploy this repository](#how-to-deploy-this-repository)
+- [Check system environment](#check-system-environment)
+- [Managed Memory](#managed-memory)
+- [HIP Transpose](#hip-transpose)
+- [hipSOLVER Library](#hipsolver-library)
+- [APU Programming with OpenMP on MI300A](#apu-programming-with-openmp-on-mi300a)
+- [HIP-Python](#hip-python)
+- [References](#references)
+
 ## How to deploy this repository
 [amd/HPCTrainingExamples](https://github.com/amd/HPCTrainingExamples),
 [ROCm/rocm-examples](https://github.com/ROCm/rocm-examples)をsubmoduleとして
