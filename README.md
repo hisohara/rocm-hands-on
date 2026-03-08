@@ -2,6 +2,9 @@
 [「計算物理春の学校2026」](https://compphysschool.github.io/2026/) 個別講義Cの
 ROCm向けハンズオンの資料です。
 
+- Table of Content
+{:toc}
+
 ## How to deploy this repository
 [amd/HPCTrainingExamples](https://github.com/amd/HPCTrainingExamples),
 [ROCm/rocm-examples](https://github.com/ROCm/rocm-examples)をsubmoduleとして
