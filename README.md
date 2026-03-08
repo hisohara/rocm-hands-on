@@ -2,9 +2,6 @@
 [「計算物理春の学校2026」](https://compphysschool.github.io/2026/) 個別講義Cの
 ROCm向けハンズオンの資料です。
 
-- Table of Content
-{:toc}
-
 ## How to deploy this repository
 [amd/HPCTrainingExamples](https://github.com/amd/HPCTrainingExamples),
 [ROCm/rocm-examples](https://github.com/ROCm/rocm-examples)をsubmoduleとして
@@ -130,6 +127,21 @@ make transpose_timed
 ./transpose_timed
 ```
 
+## hipSOLVER Library
+LAPACK相当のAPIをサポートしているhipSOLVERのサンプルプログラムを見ていきます。
+サポートされているAPIのリストは[hipSOLVER documentation](https://rocm.docs.amd.com/projects/hipSOLVER/en/latest/index.html)
+を参照してください。
+
+### QR Factorization Example
+行列のQR分解の例です。[`hipsolverDgeqrf`](https://rocm.docs.amd.com/projects/hipSOLVER/en/latest/reference/api/lapack.html#hipsolver-type-geqrf)
+を用いています。
+
+```bash
+cd third_party/rocm-examples/Libraries/hipSOLVER/geqrf
+make
+./hipsolver_geqrf
+
+```
 
 
 ## References
