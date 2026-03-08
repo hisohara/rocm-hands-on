@@ -78,6 +78,56 @@ amdclang -O3 -fstrict-aliasing -fopenmp --offload-arch=gfx942 -fno-lto -lm -o op
 HSA_XNACK=1 ./openmp_code-gpu
 ```
 
+OpenMPを用いれば、処理の重いループ構造を少しずつGPUに移行させることが可能です。
+
+## HIP Transpose
+行列の転置処理を例にアルゴリズムの違い、ROCmの標準ライブラリの導入について
+見ていきます。
+
+### Transpose Read Contiguous
+行列のデータ読み込みのindexで並列化する例です。
+
+```bash
+cd third_party/HPCTrainingExamples/HIP/transpose
+make transpose_read_contiguous
+./transpose_read_contiguous
+```
+
+### Transpose Write Contiguous
+行列のデータ書き込みのindexで並列化する例です。
+transpose_read_contiguousと比較して大きく性能が上回ります。
+
+```bash
+make transpose_write_contiguous
+./transpose_write_contiguous
+```
+
+### Tiled Matrix Transpose
+行列を行方向、列方向で分割してタイル化したものです。さらに性能は
+上回りますが、コードは複雑になります。
+
+```bash
+make transpose_tiled
+./transpose_tiled
+```
+
+### Transpose from the rocblas library
+ROCmの標準ライブラリであるrocBLASにある転置処理の関数を呼び出します。
+行列処理のエキスパートでなくとも、そこそこの性能を得ることができます。
+
+```bash
+make transpose_rocblas
+./transpose_rocblas
+```
+
+手法の違いを以下のアプリケーションで比較してみましょう。
+
+```bash
+make transpose_timed
+./transpose_timed
+```
+
+
 
 ## References
 - [AMD ROCm documentation](https://rocm.docs.amd.com/en/latest/)
