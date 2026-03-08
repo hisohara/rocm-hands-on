@@ -1,3 +1,6 @@
 [submodule "third_party/HPCTrainingExamples"]
 	path = third_party/HPCTrainingExamples
 	url = https://github.com/amd/HPCTrainingExamples.git
+[submodule "third_party/rocm-examples"]
+	path = third_party/rocm-examples
+	url = https://github.com/ROCm/rocm-examples
