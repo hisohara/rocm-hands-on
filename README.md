@@ -295,6 +295,7 @@ hipcc nbody-orig.cpp -o nbody-orig
 
 ## References
 - [AMD ROCm documentation](https://rocm.docs.amd.com/en/latest/)
+  - [Unified memory management](https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_runtime_api/memory_management/unified_memory.html)
 - [AMD ROCm Blogs](https://rocm.blogs.amd.com/)
   - [MI300A - Exploring the APU advantage](https://rocm.blogs.amd.com/software-tools-optimization/mi300a-programming/README.html)
 - ROCm Examples
