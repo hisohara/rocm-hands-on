@@ -63,6 +63,15 @@ make
 
 実行にあたっては、`script-1_managed-memory-gpu.sh` を参考にしてください。
 
+#### For advanced user
+どのようなHIPのAPIが呼び出されているのかを確認するためにプロファイラを用いましょう。
+
+```bash
+rocprofv3 --sys-trace --output-format csv -- ./gpu_code
+```
+
+`hip_api_trace.csv`, `memory_copy_trace.csv`を参照してみましょう。
+
 ### Managed Memory Code
 APUプログラミングを体感してみましょう。ソースコードの違いをまず確認してください。
 `hipMalloc`, `hipMemcpy`が無くなっています。
@@ -77,6 +86,16 @@ HSA_XNACK=0 ./gpu_code
 ```
 
 実行にあたっては、`script-1_managed-memory-managed.sh` を参考にしてください。
+
+#### For advanced user
+どのようなHIPのAPIが呼び出されているのかを確認するためにプロファイラを用いましょう。
+
+```bash
+HSA_XNACK=1 rocprofv3 --sys-trace --output-format csv -- ./gpu_code
+```
+
+`hipMemcpy`が無くなっていることを確認してください。
+
 
 ### OpenMP Code
 OpenMPはCPUコードをGPU向けコードに移行するにあたって非常に有用なツールです。
