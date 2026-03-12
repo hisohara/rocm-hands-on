@@ -22,7 +22,7 @@ ROCm向けハンズオンの資料です。
 git clone --recurse-submodules https://github.com/hisohara/rocm-hands-on.git
 ```
 
-最新のROCmのバージョンであるROCm 7.2.0で以下のコードを検証しています。
+2026年3月12日時点で最新のROCmのバージョンであるROCm 7.2.0で、以下のコードを検証しています。
 
 ```bash
 module load rocm/7.2.0
