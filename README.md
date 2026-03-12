@@ -272,3 +272,7 @@ hipcc nbody-orig.cpp -o nbody-orig
 - [AMD ROCm documentation](https://rocm.docs.amd.com/en/latest/)
 - [AMD ROCm Blogs](https://rocm.blogs.amd.com/)
   - [MI300A - Exploring the APU advantage](https://rocm.blogs.amd.com/software-tools-optimization/mi300a-programming/README.html)
+- ROCm Examples
+  - [GitHub:HPCTrainingExamples](https://github.com/amd/HPCTrainingExamples)
+  - [GitHub:rocm-examples](https://github.com/ROCm/rocm-examples)
+- [MI300A Lecture at University of Tsukuba](https://www.ccs.tsukuba.ac.jp/amd-mi300a/)
