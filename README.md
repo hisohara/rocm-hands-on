@@ -22,6 +22,12 @@ ROCm向けハンズオンの資料です。
 git clone --recurse-submodules https://github.com/hisohara/rocm-hands-on.git
 ```
 
+最新のROCmのバージョンであるROCm 7.2.0で以下のコードを検証しています。
+
+```bash
+module load rocm/7.2.0
+```
+
 ## Check system environment
 GPUの統計情報や構成を確認します。`rocminfo`はアーキテクチャ名を確認する際に
 有用です。MI300Aの場合、`gfx942`です。`lscpu`では`Model name`を確認してください。
