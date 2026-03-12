@@ -10,6 +10,7 @@ ROCm向けハンズオンの資料です。
 - [hipSOLVER Library](#hipsolver-library)
 - [APU Programming with OpenMP on MI300A](#apu-programming-with-openmp-on-mi300a)
 - [HIP-Python](#hip-python)
+- [HIPIFY](#hipify)
 - [References](#references)
 
 ## How to deploy this repository
@@ -254,6 +255,18 @@ HSA_XNACK=1 python hipblas_numpy_USM_example.py
 ```
 
 実行にあたっては、`script-5_hip-python.sh` を参考にしてください。
+
+## HIPIFY
+CUDAのソースコードをHIPに変換するHIPIFYを使ってみましょう。
+
+```bash
+cd third_party/HPCTrainingExamples/HIPIFY/mini-nbody/cuda
+cp ../timer.h .
+hipify-perl -examine nbody-orig.cu
+hipify-perl nbody-orig.cu > nbody-orig.cpp
+hipcc nbody-orig.cpp -o nbody-orig
+./nbody-orig
+```
 
 ## References
 - [AMD ROCm documentation](https://rocm.docs.amd.com/en/latest/)
