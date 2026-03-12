@@ -9,7 +9,7 @@
 module load rocm/7.2.0
 
 cd $PBS_O_WORKDIR
-cd rocm-hands-on/third_party/rocm-examples/Libraries/hipSOLVER
+cd third_party/rocm-examples/Libraries/hipSOLVER
 cd geqrf
 
 ./hipsolver_geqrf

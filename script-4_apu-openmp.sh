@@ -9,7 +9,7 @@
 module load rocm/7.2.0
 
 cd $PBS_O_WORKDIR
-cd rocm-hands-on/third_party/HPCTrainingExamples/Pragma_Examples/OpenMP/USM
+cd third_party/HPCTrainingExamples/Pragma_Examples/OpenMP/USM
 cd vector_add_auto_zero_copy
 
 export LIBOMPTARGET_INFO=-1

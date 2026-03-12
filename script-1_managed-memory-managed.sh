@@ -9,7 +9,7 @@
 module load rocm/7.2.0
 
 cd $PBS_O_WORKDIR
-cd rocm-hands-on/third_party/HPCTrainingExamples/ManagedMemory
+cd third_party/HPCTrainingExamples/ManagedMemory
 cd Managed_Memory_Code
 
 echo "### HSA_XNACK=1"
